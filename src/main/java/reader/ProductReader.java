@@ -1,15 +1,11 @@
 package reader;
 
+import mapper.ColumnIndexMapper;
 import model.Product;
-import org.apache.poi.hssf.usermodel.HSSFWorkbookFactory;
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.formula.EvaluationWorkbook;
-import org.apache.poi.ss.formula.udf.UDFFinder;
 import org.apache.poi.ss.usermodel.*;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.util.*;
 
 public class ProductReader {
@@ -24,14 +20,9 @@ public class ProductReader {
 
             Sheet aba = workbook.getSheetAt(0);
 
-            Map<String, List<Integer>> indiceColunas = new HashMap<>();
             Row linhaCabecalho = aba.getRow(2);
-
-            for (Cell celula : linhaCabecalho){
-                String nomeColuna = celula.getStringCellValue().trim();
-                int indice = celula.getColumnIndex();
-                indiceColunas.computeIfAbsent(nomeColuna, k -> new ArrayList<>()).add(indice);
-            }
+            ColumnIndexMapper mapper = new ColumnIndexMapper();
+            Map<String, List<Integer>> indiceColunas = mapper.mapear(linhaCabecalho);
 
             for (int i = 5; i <= aba.getLastRowNum(); i++){
                 Row linha = aba.getRow(i);

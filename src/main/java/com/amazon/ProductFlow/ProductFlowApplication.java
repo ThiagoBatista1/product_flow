@@ -4,6 +4,7 @@ import model.Product;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import reader.ProductReader;
+import writer.TemplateWriter;
 
 import java.io.IOException;
 import java.util.List;
@@ -19,5 +20,11 @@ public class ProductFlowApplication {
 		for(Product produto : produtos){
 			System.out.println(produto);
 		}
+
+		TemplateWriter writer = new TemplateWriter();
+		writer.escreverProduto(produtos, "src/main/resources/planilha_amazon_teste.xlsm.xlsx", "src/main/resources/planilha_amazon_teste_produtos.xlsm.xlsx");
+
+		System.out.println("Arquivo de saída gerado com sucesso!");
+
 	}
 }

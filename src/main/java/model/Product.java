@@ -2,9 +2,11 @@ package model;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.ToString;
 
 @Getter
 @Builder
+@ToString
 public class Product {
 
     private String nome; //Nome do Produto
@@ -103,55 +105,55 @@ public class Product {
         this.certTesteExterna = certTesteExterna;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "nome='" + nome + '\'' +
-                ", codigoFornecedor='" + codigoFornecedor + '\'' +
-                ", skuFornecedor='" + skuFornecedor + '\'' +
-                ", tipoProduto='" + tipoProduto + '\'' +
-                ", destaqueProduto='" + destaqueProduto + '\'' +
-                ", nomeMarca='" + nomeMarca + '\'' +
-                ", tipoIdExterno='" + tipoIdExterno + '\'' +
-                ", idExterno='" + idExterno + '\'' +
-                ", categoria='" + categoria + '\'' +
-                ", subCategoria='" + subCategoria + '\'' +
-                ", caminhoRecomendado1='" + caminhoRecomendado1 + '\'' +
-                ", caminhoRecomendado2='" + caminhoRecomendado2 + '\'' +
-                ", nivelPacote='" + nivelPacote + '\'' +
-                ", numModelo='" + numModelo + '\'' +
-                ", nomeModelo='" + nomeModelo + '\'' +
-                ", fabricante='" + fabricante + '\'' +
-                ", topico1='" + topico1 + '\'' +
-                ", topico2='" + topico2 + '\'' +
-                ", topico3='" + topico3 + '\'' +
-                ", topico4='" + topico4 + '\'' +
-                ", topico5='" + topico5 + '\'' +
-                ", palavrasChave='" + palavrasChave + '\'' +
-                ", material='" + material + '\'' +
-                ", quantidadeItens='" + quantidadeItens + '\'' +
-                ", nomeTipoProduto='" + nomeTipoProduto + '\'' +
-                ", descricao='" + descricao + '\'' +
-                ", cor='" + cor + '\'' +
-                ", numPeca='" + numPeca + '\'' +
-                ", fonteEnergia='" + fonteEnergia + '\'' +
-                ", precoCusto='" + precoCusto + '\'' +
-                ", codigoNCM='" + codigoNCM + '\'' +
-                ", origemMercadoria='" + origemMercadoria + '\'' +
-                ", comprimentoPacote='" + comprimentoPacote + '\'' +
-                ", uniComprimentoPacote='" + uniComprimentoPacote + '\'' +
-                ", larguraPacote='" + larguraPacote + '\'' +
-                ", uniLarguraPacote='" + uniLarguraPacote + '\'' +
-                ", alturaPacote='" + alturaPacote + '\'' +
-                ", uniAlturaPacote='" + uniAlturaPacote + '\'' +
-                ", pesoPacote='" + pesoPacote + '\'' +
-                ", uniPesoPacote='" + uniPesoPacote + '\'' +
-                ", quantItensPacote='" + quantItensPacote + '\'' +
-                ", numCaixas='" + numCaixas + '\'' +
-                ", paisOrigem='" + paisOrigem + '\'' +
-                ", baterias='" + baterias + '\'' +
-                ", RegProdutosPegrigosos='" + regProdutosPerigosos + '\'' +
-                ", CertTesteExterna='" + certTesteExterna + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Product{" +
+//                "nome='" + nome + '\'' +
+//                ", codigoFornecedor='" + codigoFornecedor + '\'' +
+//                ", skuFornecedor='" + skuFornecedor + '\'' +
+//                ", tipoProduto='" + tipoProduto + '\'' +
+//                ", destaqueProduto='" + destaqueProduto + '\'' +
+//                ", nomeMarca='" + nomeMarca + '\'' +
+//                ", tipoIdExterno='" + tipoIdExterno + '\'' +
+//                ", idExterno='" + idExterno + '\'' +
+//                ", categoria='" + categoria + '\'' +
+//                ", subCategoria='" + subCategoria + '\'' +
+//                ", caminhoRecomendado1='" + caminhoRecomendado1 + '\'' +
+//                ", caminhoRecomendado2='" + caminhoRecomendado2 + '\'' +
+//                ", nivelPacote='" + nivelPacote + '\'' +
+//                ", numModelo='" + numModelo + '\'' +
+//                ", nomeModelo='" + nomeModelo + '\'' +
+//                ", fabricante='" + fabricante + '\'' +
+//                ", topico1='" + topico1 + '\'' +
+//                ", topico2='" + topico2 + '\'' +
+//                ", topico3='" + topico3 + '\'' +
+//                ", topico4='" + topico4 + '\'' +
+//                ", topico5='" + topico5 + '\'' +
+//                ", palavrasChave='" + palavrasChave + '\'' +
+//                ", material='" + material + '\'' +
+//                ", quantidadeItens='" + quantidadeItens + '\'' +
+//                ", nomeTipoProduto='" + nomeTipoProduto + '\'' +
+//                ", descricao='" + descricao + '\'' +
+//                ", cor='" + cor + '\'' +
+//                ", numPeca='" + numPeca + '\'' +
+//                ", fonteEnergia='" + fonteEnergia + '\'' +
+//                ", precoCusto='" + precoCusto + '\'' +
+//                ", codigoNCM='" + codigoNCM + '\'' +
+//                ", origemMercadoria='" + origemMercadoria + '\'' +
+//                ", comprimentoPacote='" + comprimentoPacote + '\'' +
+//                ", uniComprimentoPacote='" + uniComprimentoPacote + '\'' +
+//                ", larguraPacote='" + larguraPacote + '\'' +
+//                ", uniLarguraPacote='" + uniLarguraPacote + '\'' +
+//                ", alturaPacote='" + alturaPacote + '\'' +
+//                ", uniAlturaPacote='" + uniAlturaPacote + '\'' +
+//                ", pesoPacote='" + pesoPacote + '\'' +
+//                ", uniPesoPacote='" + uniPesoPacote + '\'' +
+//                ", quantItensPacote='" + quantItensPacote + '\'' +
+//                ", numCaixas='" + numCaixas + '\'' +
+//                ", paisOrigem='" + paisOrigem + '\'' +
+//                ", baterias='" + baterias + '\'' +
+//                ", RegProdutosPegrigosos='" + regProdutosPerigosos + '\'' +
+//                ", CertTesteExterna='" + certTesteExterna + '\'' +
+//                '}';
+//    }
 }
