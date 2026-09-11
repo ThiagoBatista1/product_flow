@@ -1,4 +1,4 @@
-package model;
+package com.amazon.ProductFlow.model;
 
 import lombok.Builder;
 import lombok.Getter;

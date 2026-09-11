@@ -1,22 +1,21 @@
-package reader;
+package com.amazon.ProductFlow.reader;
 
-import mapper.ColumnIndexMapper;
-import model.Product;
+import com.amazon.ProductFlow.mapper.ColumnIndexMapper;
+import com.amazon.ProductFlow.model.Product;
 import org.apache.poi.ss.usermodel.*;
 
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.*;
 
 public class ProductReader {
 
     private final DataFormatter formatter = new DataFormatter();
 
-    public List<Product> lerProdutos(String caminhoArquivo) throws IOException{
+    public List<Product> lerProdutos(InputStream inputStream) throws IOException{
         List<Product> produtos = new ArrayList<>(); // cria uma lista vazia
 
-        try(FileInputStream fis = new FileInputStream(caminhoArquivo);
-            Workbook workbook = WorkbookFactory.create(fis)){
+        try(Workbook workbook = WorkbookFactory.create(inputStream)){
 
             Sheet aba = workbook.getSheetAt(0);
 

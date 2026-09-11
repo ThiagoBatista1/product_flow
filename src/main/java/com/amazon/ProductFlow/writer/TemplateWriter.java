@@ -1,23 +1,18 @@
-package writer;
+package com.amazon.ProductFlow.writer;
 
-import mapper.ColumnIndexMapper;
-import model.Product;
-import org.apache.poi.hssf.usermodel.HSSFWorkbookFactory;
+import com.amazon.ProductFlow.mapper.ColumnIndexMapper;
+import com.amazon.ProductFlow.model.Product;
 import org.apache.poi.ss.usermodel.*;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 import java.util.Map;
 
 public class TemplateWriter {
 
-    public void escreverProduto(List<Product> produtos, String caminhoTemplate, String caminhoSaida) throws IOException {
+    public void escreverProduto(List<Product> produtos, InputStream templateInputStream, OutputStream outputStream) throws IOException {
 
-        try (FileInputStream fis = new FileInputStream(caminhoTemplate);
-             Workbook workbook = WorkbookFactory.create(fis)) {
+        try (Workbook workbook = WorkbookFactory.create(templateInputStream)) {
 
             Sheet aba = workbook.getSheetAt(0);
 
@@ -84,10 +79,9 @@ public class TemplateWriter {
                 setValorCelula(linha, indiceColunas, "Regulamentações de produtos perigosos", 0, produto.getRegProdutosPerigosos());
                 setValorCelula(linha, indiceColunas, "Certificação de teste externa", 0, produto.getCertTesteExterna());
 
-                try (FileOutputStream fos = new FileOutputStream(caminhoSaida)){
-                    workbook.write(fos);
-                }
+
             }
+            workbook.write(outputStream);
         }
     }
     private void setValorCelula(Row linha, Map<String, List<Integer>> indiceColunas, String nomeColuna, int ocorrencia, String valor){
