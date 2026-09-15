@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@0,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="base.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 <main>
@@ -26,7 +27,7 @@
                     <span class="campo-nome">Planilha de Origem</span>
                 </div>
                 <label class="campo-card">
-                    <input type="file" accept=".xlsx,.xls" hidden>
+                    <input type="file" id="input-origem" accept=".xlsx,.xls" hidden>
 
                     <span class="icone">
                     <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +50,7 @@
                 </span>
                     <div class="card-textos">
                         <span class="card-titulo">Selecione o arquivo</span>
-                        <span class="card-subtitulo">Suporta arquivos .XLSX</span>
+                        <span class="card-subtitulo">Suporta arquivos .XLSX, .XLS</span>
                     </div>
                 </label>
             </div>
@@ -59,7 +60,7 @@
                     <span class="campo-nome">Planilha de Destino</span>
                 </div>
                 <label class="campo-card">
-                    <input type="file" accept=".xlsx,.xls" hidden>
+                    <input type="file" id="input-template" accept=".xlsx,.xls" hidden>
 
                     <span class="icone">
                     <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +83,7 @@
                 </span>
                     <div class="card-textos">
                         <span class="card-titulo">Selecione o template vazio</span>
-                        <span class="card-subtitulo">Suporta arquivos .XLSX</span>
+                        <span class="card-subtitulo">Suporta arquivos .XLSX, XLS</span>
                     </div>
                 </label>
             </div>
@@ -98,7 +99,7 @@
             </button>
         </div>
         <div class="resultado" hidden>
-            <p class="titulo-resultado">Planilha gerada com <strong>sucesso!</strong></p>
+            <p class="titulo-resultado">Planilha gerada com sucesso!</p>
             <div class="card-resultado">
                 <span class="icone">
                     <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">

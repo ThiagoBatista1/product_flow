@@ -83,6 +83,9 @@ h1 span{
     flex-direction: column;
     gap: 32px;
 }
+.planilha-form[hidden] {
+    display: none;
+}
 .campo{
     display: flex;
     flex-direction: column;
@@ -170,18 +173,23 @@ h1 span{
 .campo-card.preenchido:hover{
     border: 2px solid var(--cor-primary-100);
 }
+.campo-card.preenchido.arrastando {
+    border-color: var(--cor-primary-500);
+}
 .campo-card.erro{
     background-color: var(--cor-neutral-100);
     border: 2px dashed var(--cor-neutral-300);
 }
 .campo-card.erro .icone{
-    background-color: var(--cor-background);
-    border: 1px solid var(--cor-neutral-300);
+    background-color: var(--cor-warning-error);
+    color: var(--cor-background);
+}
+.campo-tag.erro{
+    border:1px solid var(--cor-warning-error);
     color: var(--cor-warning-error);
 }
-.campo-card.erro .campo-tag{
-    border-color: var(--cor-warning-error);
-    color: var(--cor-warning-error);
+.campo-card.erro:hover{
+    border:2px dashed var(--cor-primary-100);
 }
 .campo-card.desabilitado{
     background-color: var(--cor-background);
@@ -228,6 +236,9 @@ h1 span{
     width: 16px;
     height: 16px;
 }
+.icone-loading[hidden]{
+    display: none;
+}
 @keyframes girar {
     from{
         transform: rotate(0deg);
@@ -245,6 +256,9 @@ h1 span{
     gap: 32px;
     text-align: center;
 }
+.resultado[hidden] {
+    display: none;
+}
 .titulo-resultado{
     font-size: 18px;
     font-weight: 600;
@@ -258,6 +272,9 @@ h1 span{
     border: 2px solid var(--cor-neutral-300);
     border-radius: 12px;
     padding: 24px;
+}
+.card-resultado[hidden] {
+    display: none;
 }
 .card-resultado .icone{
     display: flex;
@@ -274,9 +291,6 @@ h1 span{
     font-size: 16px;
     font-weight: 600;
     color: var(--cor-text-dark);
-}
-.resultado.erro .card-resultado .icone{
-    background-color: var(--cor-warning-error);
 }
 .botoes{
     display: flex;
@@ -300,10 +314,14 @@ h1 span{
     cursor: pointer;
     width: 100%;
 }
+.botao-baixar[hidden]{
+    display: none;
+}
 .botao-baixar:hover{
     background-color: var(--cor-primary-100);
 }
 .botao-voltar{
+    background: none;
     display: flex;
     align-items: center;
     justify-content: center;
