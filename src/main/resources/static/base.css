@@ -143,11 +143,17 @@ h1 span{
     font-size: 16px;
     font-weight: 700;
     color: var(--cor-text-dark);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .card-subtitulo{
     font-size: 14px;
     font-weight: 400;
     color: var(--cor-text-default);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .divisor{
     border: none;
@@ -293,6 +299,9 @@ h1 span{
     font-size: 16px;
     font-weight: 600;
     color: var(--cor-text-dark);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .botoes{
     display: flex;
@@ -315,6 +324,11 @@ h1 span{
     font-family: 'Inter', sans-serif;
     cursor: pointer;
     width: 100%;
+}
+.botao-baixar .texto-botao{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .botao-baixar[hidden]{
     display: none;
@@ -438,7 +452,7 @@ h1 span{
     .botao-baixar{
         gap: 8px;
         font-size: 14px;
-        padding: 12px 0;
+        padding: 12px 16px;
     }
     .botao-voltar{
         gap: 8px;
