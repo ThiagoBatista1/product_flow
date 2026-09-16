@@ -29,7 +29,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    padding: 0 104px;
 }
 
 main{
@@ -43,7 +43,7 @@ main{
 h1{
     font-family: 'Playfair Display', serif;
     color:var(--cor-primary-500);
-    font-size: 68px;
+    font-size: 64px;
     font-weight: 900;
     line-height: 0.8;
     letter-spacing: 0;
@@ -57,6 +57,7 @@ h1 span{
     flex-direction: column;
     justify-content: center;
     max-width: 480px;
+    min-width: 384px;
     padding: 0;
     margin: 0;
     gap: 48px;
@@ -77,6 +78,7 @@ h1 span{
     padding: 40px;
     width: 100%;
     max-width: 600px;
+    min-width: 480px;
 }
 .planilha-form{
     display: flex;
@@ -340,6 +342,110 @@ h1 span{
 .botao-voltar:hover{
     color: var(--cor-primary-100);
     border-color: var(--cor-primary-100);
+}
+@media (max-width: 1135px) {
+    body{
+        padding: 80px 104px;
+    }
+    main{
+        align-items: center;
+        flex-direction: column;
+    }
+}
+@media (max-width: 833px){
+    body{
+        padding: 64px 40px;
+    }
+    main{
+        gap: 56px;
+    }
+    h1{
+        font-size: 48px;
+    }
+    .textos{
+        max-width: 480px;
+        gap: 40px;
+    }
+    .form-container{
+        max-width: 600px;
+        min-width: 400px;
+    }
+}
+@media (max-width: 479px){
+    body{
+        padding: 48px 16px;
+    }
+    main{
+        gap: 48px;
+    }
+    h1{
+        font-size: 36px;
+    }
+    .textos{
+        min-width: auto;
+        gap: 32px;
+    }
+    .textos .desc{
+        font-size: 16px;
+    }
+    .form-container{
+        padding: 24px;
+        min-width: auto;
+    }
+    .planilha-form{
+        gap: 16px;
+    }
+    .campo{
+        gap: 8px;
+    }
+    .campo-titulo{
+        gap: 8px;
+    }
+    .campo-nome{
+        font-size: 16px;
+    }
+    .campo-card{
+        gap: 8px;
+        padding: 16px;
+    }
+    .card-titulo{
+        font-size: 14px;
+    }
+    .card-subtitulo{
+        font-size: 12px;
+    }
+    .botao-gerar{
+        gap: 8px;
+        font-size: 14px;
+        padding: 12px 0;
+    }
+    .resultado{
+        gap: 16px;
+    }
+    .titulo-resultado{
+        font-size: 16px;
+    }
+    .card-resultado{
+        gap: 8px;
+        padding: 16px;
+    }
+    .nome-arquivo{
+        font-size: 14px;
+    }
+    .botoes{
+        gap: 8px;
+    }
+    .botao-baixar{
+        gap: 8px;
+        font-size: 14px;
+        padding: 12px 0;
+    }
+    .botao-voltar{
+        gap: 8px;
+        font-size: 14px;
+        padding: 12px 0;
+    }
+
 }
 
 
